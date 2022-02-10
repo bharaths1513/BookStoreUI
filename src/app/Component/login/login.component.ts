@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
           // this.loginService.loginUser(response.token)
           // window.location.href="/dashboard"
           localStorage.setItem("token",response.data)
+          this.router.navigate(["/homepage"])
          
 
         },

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CartResponse } from '../model/cart-response';
+// import { CartResponse } from '../model/cart-response';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +11,6 @@ export class CartService {
   constructor(private http:HttpClient) { }
   
   getCart(){
-    return this.http.get<CartResponse>(`${this.baseurl}/FindAllBooks`,{headers: new HttpHeaders({token: localStorage['token']})})
+    return this.http.get<any>(`${this.baseurl}/FindAllBooks`,{headers: new HttpHeaders({token: localStorage['token']})})
   }
 }

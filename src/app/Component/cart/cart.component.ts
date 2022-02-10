@@ -14,7 +14,7 @@ export class CartComponent implements OnInit {
 
  
   cartModel : Cartmodel = new Cartmodel();
-  cartList : BookDetails[]= [];
+  cartList :any;
   cartvalue:number | undefined;
 
   edituseraddressform!: FormGroup;
@@ -43,7 +43,12 @@ export class CartComponent implements OnInit {
 
   getProductOfCart(){
     this.cartService.getCart().subscribe(
-      data=>{ console.log(data), this.cartList= data.books, this.cartvalue= data.Quantity},
+      data=>{
+         console.log(data), this.cartList= data
+        
+        
+
+        },
       error=> { console.log(error)}
     );
   }
