@@ -6,4 +6,5 @@ export class BookDetails {
     bookLogo: string | undefined;
     bookPrice: any | undefined
     bookQuantity: number | undefined;  
+  static quantity: any;
 }
